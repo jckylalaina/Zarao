@@ -1,0 +1,14 @@
+ <div class="card" id="create_new_space" style="display:none;width: 20rem;">
+
+         <div class="card-head p-2">
+           <span class="float-right mr-2"><button class="close">x</button></span>
+           <p class="text-center"><h1 class="text-center"></h1></p>
+         </div>
+          <div class="card-body">
+          <%= form_tag url_for({controller:'spaces',action:'create'}),method:'post' do %>
+           <p><input type="text" class="form-control" name="title" placeholder="Entrer un nouveau espace de travails"></p>
+           <p><input type="submit" name="" value="Créer" class="btn btn-sm btn-primary"></p>
+<%end%>
+          </div>
+
+        </div>

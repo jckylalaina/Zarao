@@ -1,0 +1,23 @@
+ 
+<div class="card pb-3" id="note_task" style="display:none;width: 23rem;">
+ 
+     <div class="card-head pl-3" >
+     	<span class="float-right mr-2"><button class="close">x</button></span><br>
+      <h1><i>Notes</i></h1>
+     </div>
+      <%@pools.each do |pool|%>
+          <div class="card-body list" style="overflow: auto;">
+            <%pool.tasks.each do |task|%> 
+           <dl class="dl" id="<%=task.id%>">
+           	<%task.notes.each do |note|%>
+        <dt><%=note.user.email%></dt>
+        <dd><%=note.description%><br><span class="date"><%=note.created_at.strftime("%d %h %Y")%> à <%=note.created_at.strftime("%I:%M %P")%></span></dd>
+        </dl>
+            
+           <%end%>
+          <%end%>
+          </div>
+            <%end%>
+
+
+        </div>

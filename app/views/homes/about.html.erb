@@ -1,0 +1,210 @@
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro" class="clearfix">
+    <div class="container">
+
+
+      <div class="intro-info">
+        <h2>A propos</h2>
+        
+      </div>
+
+    </div>
+  </section><!-- #intro -->
+
+  <main id="main">
+
+
+
+<!--    body -->
+<section id="services" class="section-bg">
+    <div class="container" id="mainContentTwo">
+
+      <header class="section-header">
+        <h3>Zara-o</h3>
+        <p>L’un des facteurs essentiels à la réussite est de s’assurer d'avoir les bonnes outils</p>
+      </header>
+
+      <div class="row">
+      <div class="col-md-3 col-lg-3 "></div>
+        <div class=" col-lg-6 col-md-5 wow bounceInUp" data-wow-duration="1.4s" style="visibility: visible; animation-duration: 1.4s; animation-name: bounceInUp;">
+          <div class="box" id="fourthBox">
+            <div class="icon"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+            <h4 class="title">Un bref historique</h4>
+            <p class="description">Faisant partie de la promotion 4 de Sayna, nous sommes des étudiants qui suivent le parcours de #the_hacking_project où nous aurons l'occasion de terminer ce parcours en présentant un projet. Durant la formation, nous avons remarqué qu'afin de faire fonctionner la communauté Sayna, ils s'organisaient en plaçant des post-it pour le planning ou des notes importantes qu'ils devaient se rappeler. Nous nous sommes donc donné pour mission de faire une application qui répondra a ce besoin et qui serait non seulement utile à Sayna mais aussi pour toute entreprise voulant optimiser leurs rendements. Le temps est précieux et avec une meilleure organisation il est possible de gagner une bonne marge de temps. D'où Zara-o est née, une application qui va remplacer vos agendas, vos plannings , vos bloc-notes et même votre carnet de contact car vous aurez désormais la possibilité de gérer tout cela au même endroit tout en étant proche de votre communauté avec tous les membres de votre entreprise qui pourront se regrouper dans un seul espace de travail. Cette application est la meilleure option pour apporter une efficacité à votre processus d'affaire ainsi que de gérer votre entreprise avec un outil tout en un.</p>
+          </div>
+        </div>
+
+
+       
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Team-->
+  <section id="team">
+    <div class="container"  id="mainContentThree">
+      <div class="section-header">
+        <h3>Team</h3>
+        
+      </div>
+
+      <div class="row"  id="tenthBox">
+         <div class="col-lg-1 col-md-1"></div>
+        <div class="col-lg-2 col-md-2 wow fadeInUp" id="fifthBox">
+          <div class="member">
+            <img src="/assets/3.png" class="img-fluid" alt="">
+            <div class="member-info">
+              <div class="member-info-content">
+                <h4>Rj.Fanotiana</h4>
+                <span>Dev</span>
+        
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-2 wow fadeInUp" id="sixthBox">
+          <div class="member">
+            <img src="/assets/5.png" class="img-fluid" alt="">
+            <div class="member-info">
+              <div class="member-info-content">
+                <h4>Jcky</h4>
+                <span>dev</span>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-2 wow fadeInUp" id="seventhBox">
+          <div class="member">
+            <img src="/assets/2.png" class="img-fluid" alt="">
+            <div class="member-info">
+              <div class="member-info-content">
+                <h4>Mirana</h4>
+                <span>dev</span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-2 wow fadeInUp" id="eighthBox">
+          <div class="member">
+            <img src="/assets/4.png" class="img-fluid" alt="">
+            <div class="member-info">
+              <div class="member-info-content">
+                <h4>Sendra</h4>
+                <span>dev</span>
+           
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2 wow fadeInUp" id="ninethBox">
+          <div class="member">
+            <img src="/assets/1.png" class="img-fluid" alt="">
+            <div class="member-info">
+              <div class="member-info-content">
+                <h4>Mahefa</h4>
+                <span>dev</span>
+   
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-1 col-md-1"></div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section>
+
+<!--Contact-->
+
+<section >
+  <div class="section-bg">
+
+    <div class="section-header">
+      <h3>Contactez-nous</h3>
+    
+      <p>Pour toutes information,veuillez nous écrire à : <br>
+      contact@zarao.mg</p>
+    </div>
+
+  </div>
+</section>
+  <script type="text/javascript">
+    var isScrolling = false;
+ 
+    window.addEventListener("scroll", throttleScroll, false);
+ 
+    function throttleScroll(e) {
+      if (isScrolling == false) {
+        window.requestAnimationFrame(function() {
+          scrolling(e);
+          isScrolling = false;
+        });
+      }
+      isScrolling = true;
+    }
+ 
+    document.addEventListener("DOMContentLoaded", scrolling, false);
+
+    var fourthBox = document.querySelector("#fourthBox");
+    var fifthBox = document.querySelector("#fifthBox"); 
+    var sixthBox = document.querySelector("#sixthBox");
+    var seventhBox = document.querySelector("#seventhBox"); 
+    var eighthBox = document.querySelector("#eighthBox");
+    var ninethBox = document.querySelector("#ninethBox");
+    var tenthBox = document.querySelector("#tenthBox"); 
+
+    function scrolling(e) {
+      
+      if (isPartiallyVisible(fourthBox)){
+        fourthBox.classList.add("active");
+      }
+      if (isFullyVisible(fifthBox)) {
+        fifthBox.classList.add("active");
+     }
+     if (isPartiallyVisible(sixthBox)){
+        sixthBox.classList.add("active");
+      }
+      if (isFullyVisible(seventhBox)) {
+        seventhBox.classList.add("active");
+     }
+      if (isPartiallyVisible(eighthBox)){
+        eighthBox.classList.add("active");
+      }
+      if (isFullyVisible(ninethBox)) {
+        ninethBox.classList.add("active");
+     }
+     if (isFullyVisible(tenthBox)) {
+        tenthBox.classList.add("active");
+     }
+    }
+ 
+    function isPartiallyVisible(el) {
+      var elementBoundary = el.getBoundingClientRect();
+ 
+      var top = elementBoundary.top;
+      var bottom = elementBoundary.bottom;
+      var height = elementBoundary.height;
+ 
+      return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+    }
+ 
+    function isFullyVisible(el) {
+      var elementBoundary = el.getBoundingClientRect();
+ 
+      var top = elementBoundary.top;
+      var bottom = elementBoundary.bottom;
+ 
+      return ((top >= 0) && (bottom <= window.innerHeight));
+    }
+  </script>

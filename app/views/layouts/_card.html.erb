@@ -1,0 +1,18 @@
+ <div class="card pb-3" id="create_task_form" style="display: none;width: 23rem;">
+ 
+     
+          <div class="card-body">
+             <span class="float-right mr-2"><button class="close">x</button></span>
+           <p class="text-center"><h1 class="text-center">Créer votre tâche</h1></p>
+           <%= form_tag url_for({controller:'tasks',action:'create'}),method:'post' do %>
+           <p><input type="text" class="form-control" placeholder="Catégory" name="category"></p>
+           <p><input type="text" class="form-control" placeholder="titre" name="title"></p>
+           <p><textarea class="form-control" name='description'>Description du tache</textarea></p>
+          <p><label>à:</label><br><input type="date" class="form-control form-sm" name="start_date"></p>
+          <p><label>jusqu'à</label><br><input type="date" class="form-control form-sm" name="limite_date"></p>
+            <input type="submit" class="float-right btn btn-outline-primary" value="valider">
+
+          </div>
+          <%end%>
+
+        </div>

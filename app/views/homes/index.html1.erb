@@ -1,0 +1,17 @@
+<%= link_to 'espace de travails' ,gtravails_path%>
+
+<% if current_user %>
+<%= link_to 'deconnecter' , destroy_user_session_path, method:'delete' %>
+	<br><br>
+<div class="row">
+<div class="col-4">
+<%= render "tasks/index" %>
+</div>
+<div class="col-4">
+<%= render "doings/index" %>
+</div>
+<div class="col-4">
+<%= render "finishes/index" %>
+</div>
+</div>
+	<%end%>

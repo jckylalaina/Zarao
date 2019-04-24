@@ -1,0 +1,33 @@
+ <%i = 1%>
+ <%@pools.each do |pool|%>
+<%if i <= 1 %>
+ <tbody id="<%=pool.id%>" class="under">
+ 	<%pool.tasks.each do |task|%>
+                  <tr>
+                    <td><input class="finished" type="checkbox" name=""></td>
+                     <td style="display:none"><%=task.description%></td>
+                     <td class="task_link  text-warning" value="<%=task.id%>"><%=task.title%></td>
+                     <td><%=task.category%></td>
+                     <td><%=task.start_date.strftime("%d/%m/%Y")%></td>
+                     <td><%=task.limite_date.strftime("%d/%m/%Y")%></td>
+                   </tr>
+
+                   <%end%>
+ </tbody>
+ <%else%>
+ <tbody id="<%=pool.id%>" style="display: none;" class="under">
+ 	<%pool.tasks.each do |task|%>
+                   <tr>
+                    <td><input class="finished" type="checkbox" name=""></td>
+                    <td style="display:none;"><%=task.description%></td>
+                     <td class="task_link text-warning" value="<%=task.id%>"><%=task.title%></a></td>
+                     <td><%=task.category%></td>
+                     <td><%=task.start_date.strftime("%d/%m/%Y")%></td>
+                     <td><%=task.limite_date.strftime("%d/%m/%Y")%></td>
+                   </tr>
+                   <%end%>
+ </tbody>
+ <%end%>
+
+ <%i=i+1%>  
+ <%end%>

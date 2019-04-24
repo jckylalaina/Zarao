@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <style>
+    .js-doughnut-chart {
+      width: 70px !important;
+      height: 70px !important;
+    }
+     .hide{
+      opacity:0;
+      transition: opacity 3000ms;
+    }
+  </style>
+</head>
+
+<body>
+   <%= render "layouts/flashes"%>
+  <%if current_user%>
+  <!-- Header (Topbar) -->
+  <header class="u-header">
+    <div class="u-header-left">
+      <a class="u-header-logo" href="index.html">
+        <img class="u-logo-desktop" src="/assets/zarao.png" width="80" alt="Zarao">
+        <img class="img-fluid u-logo-mobile" src="/assets/zarao.png" width="50" alt="Zarao">
+      </a>
+    </div>
+
+    <div class="u-header-middle">
+      <a class="js-sidebar-invoker u-sidebar-invoker" href="#!"
+      data-is-close-all-except-this="true"
+      data-target="#sidebar">
+      <i class="fa fa-bars u-sidebar-invoker__icon--open"></i>
+      <i class="fa fa-times u-sidebar-invoker__icon--close"></i>
+    </a>
+
+    
+    
+  </div>
+
+  <div class="u-header-right">
+    <!-- Activities -->
+
+
+
+    <!-- End Apps -->
+
+    <!-- User Profile -->
+    <div class="dropdown ml-2">
+      <a class="link-muted d-flex align-items-center" href="#!" role="button" id="dropdownMenuLink" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+        <!-- <img class="u-avatar--xs img-fluid rounded-circle mr-2" src="./assets/img/avatars/img1.jpg" alt="User Profile"> -->
+        <span class="text-dark d-none d-sm-inline-block">
+          <%=current_user.email%> <a href="<%=destroy_user_session_path%>" data-method="delete" class="fa fa-sign-out text-muted ml-2" title="déconnecter dans <%=$title%>"></a>
+        </span>
+      </a>
+
+      
+
+      
+    </div>
+  </div>
+  
+  <!-- End User Profile -->
+</div>
+</header>
+<!-- End Header (Topbar) -->
+
+<%else%>
+<header id="header" class="fixed-top">
+    
+
+      <div class="logo float-left">
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+          <a href="index.html" class="scrollto"><img src="/assets/zarao.png" alt="" class="img-fluid">  </a>
+        </div>
+     
+      <div class="container">
+
+    <nav class="main-nav float-right d-none d-lg-block">
+      <ul>
+        <li class="lien active"><a href="/homes">Accueil</a></li>
+        <li class="lien"><a href="/homes/about">A propos</a></li>
+        
+        
+ 
+        <li><a href="#" class="create_new_space">new</a></li>
+      </ul>
+    </nav><!-- .main-nav -->
+    
+  </div>
+</header><!-- #header -->
+
+<%end%>
+<%= yield %>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+

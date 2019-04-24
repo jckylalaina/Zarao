@@ -56,7 +56,7 @@ $(function(){
 	//affichage des tache
 	$('.task_link').click(function(){
 		
-		$('#task_id').val($(this).attr('value'))
+		$('.task_id').val($(this).attr('value'))
 		$('.dl').hide()
 		$('.list').prepend($(`dl#${$(this).attr('value')}`))
 		$(`dl.dl#${$(this).attr('value')}`).show()

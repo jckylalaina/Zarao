@@ -3,7 +3,11 @@
          <div class="card-head pl-4">
            <span class="float-right mr-2"><button class="close">x</button></span>
            <p class="pt-4"><h3 class="float-left" id="show_title">Titre du tache <br>(category)</h3>
-            <span class="float-right"><i title="modifier" class="text-info fa fa-circle mr-3"></i><i class="fa fa-trash  mr-3 text-danger" title="supprimer"></i></span></p>
+            <span class="float-right"><i title="modifier" class="text-info fa fa-circle mr-3"></i>
+            <%= link_to @task , method: "delete",'data-confirm' => 'voulez-vous vraiment effacer cette tache?',:class=>'lien ',:remote => true  do %>
+            <i class="fa fa-trash  mr-3 text-danger"></i>
+            <%end%>
+             </p>
          </div>
           <div class="card-body">
           <p><button class="btn btn-outline-warning btn-sm">Status:en cours</button></p>

@@ -17,7 +17,7 @@
  *= require css/all.min.css
  */
  body{
- 	font-family: Georgia;
+ 	font-family: 'Josefin Sans', sans-serif;
  }
  .enter{
   position: absolute;
@@ -31,8 +31,9 @@
  }
  .btn-pool{
 border:none;
-font-family:georgia;
-font-size: 18px;
+font-family:Amiri;
+font-weight: 2px;
+font-size: 16px;
 font-color:#ff66ff;
 height:50px; 
  }
@@ -101,6 +102,7 @@ i{
     top:50px;
     right:100px;
     z-index: 9999999999;
+    height: 500px;
     max-height: 300px;
     overflow: auto;
     box-shadow: 0px 0px 6px 1px;

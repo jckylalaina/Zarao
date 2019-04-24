@@ -6,10 +6,11 @@
                   <tr>
                     <td><input class="finished" type="checkbox" name=""></td>
                      <td style="display:none"><%=task.description%></td>
-                     <td class="task_link  text-warning" value="<%=task.id%>"><%=task.title%></td>
+                     <td class="task_link  text-info" value="<%=task.id%>"><%=task.title%></td>
                      <td><%=task.category%></td>
                      <td><%=task.start_date.strftime("%d/%m/%Y")%></td>
                      <td><%=task.limite_date.strftime("%d/%m/%Y")%></td>
+                     <td>...</td>
                    </tr>
 
                    <%end%>
@@ -24,6 +25,7 @@
                      <td><%=task.category%></td>
                      <td><%=task.start_date.strftime("%d/%m/%Y")%></td>
                      <td><%=task.limite_date.strftime("%d/%m/%Y")%></td>
+                     <td>...</td>
                    </tr>
                    <%end%>
  </tbody>

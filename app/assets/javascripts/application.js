@@ -37,7 +37,7 @@ $(function(){
 	//tabulation groupe des tache
 	$('.pool').click(function(){
 		$('.pool').css("border","none")
-		$(this).css("border","solid white 2px")
+		$(this).css("border","solid white 3px")
        	let id = Number($(this).attr("id"))
         $.ajax({
         url : "/req/index",
@@ -48,7 +48,7 @@ $(function(){
 		//afichage du cuurent groupe
 		$('#current').html(`${$(this).val()}`)
 		//affichage du table tbody du cureent pool
-		$(`tbody#${$(this).attr("id")}.under`).show()
+		$(`tbody#${$(this).attr("id")}.under`).fadeIn()
    
 
 

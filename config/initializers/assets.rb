@@ -12,3 +12,26 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+Rails.application.config.assets.precompile += %w( js/Chart.min.js )
+Rails.application.config.assets.precompile += %w( js/dashboard-page-scripts.js)
+Rails.application.config.assets.precompile += %w( js/jquery-migrate.min.js )
+Rails.application.config.assets.precompile += %w( js/jquery.js )
+Rails.application.config.assets.precompile += %w( js/jquery.mCustomScrollbar.concat.min.js )
+Rails.application.config.assets.precompile += %w( js/jquery.min.js )
+Rails.application.config.assets.precompile += %w( js/main.js )
+Rails.application.config.assets.precompile += %w( js/popper.min.js )
+Rails.application.config.assets.precompile += %w( js/sidebar-nav.js )
+Rails.application.config.assets.precompile += %w( js/test.js )
+
+Rails.application.config.assets.precompile += %w(css/all.min.css )
+Rails.application.config.assets.precompile += %w(css/jquery.mCustomScrollbar.css)
+Rails.application.config.assets.precompile += %w( css/theme.css)
+
+
+
+
+
+
+
+
+
